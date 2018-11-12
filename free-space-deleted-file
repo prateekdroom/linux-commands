@@ -1,1 +1,1 @@
-sudo lsof | grep "(deleted)$" | sed -re 's/^\S+\s+(\S+)\s+\S+\s+([0-9]+).*/\1\/fd\/\2/' | while read file; do sudo bash -c ": > /proc/$file"; done
+lsof | grep deleted | awk '{print $8}' | xargs sum 2> /dev/null | awk '{ SUM += $2 } END { print SUM }'
