@@ -1,0 +1,10 @@
+sudo mkdir /mnt/vol1
+sudo mount -a
+sudo mkfs -t ext4 /dev/sdb
+sudo fdisk -l
+sudo mount /dev/sdb /mnt/vol1
+df -h
+
+
+##### add this into /etc/fstab 
+/dev/sdb	/mnt/vol1/	ext4	defaults	0 0
