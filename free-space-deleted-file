@@ -1,1 +1,10 @@
 lsof | grep deleted | awk '{print $8}' | xargs sum 2> /dev/null | awk '{ SUM += $2 } END { print SUM }'
+
+
+# If space is still not free try using ->
+
+lsof +L1 |awk {'print $2'}|xargs
+
+#and do -->
+
+kill -9 PID
