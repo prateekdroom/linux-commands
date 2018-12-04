@@ -1,0 +1,9 @@
+# OperationTimedOut: errors={}, last_host=hostname
+
+# Add these parameters to the file :-
+
+#[test@test]$ cat ~/.cassandra/cqlshrc
+
+[connection]
+request_timeout = 60
+client_timeout = 60
