@@ -1,0 +1,24 @@
+date +%j
+# Echoes day of the year (days elapsed since January 1).
+
+date +%k%M
+# Echoes hour and minute in 24-hour format, as a single digit string.
+
+
+
+# The 'TZ' parameter permits overriding the default time zone.
+date                 # Mon Mar 28 21:42:16 MST 2005
+TZ=EST date          # Mon Mar 28 23:42:16 EST 2005
+# Thanks, Frank Kannemann and Pete Sjoberg, for the tip.
+
+
+SixDaysAgo=$(date --date='6 days ago')
+OneMonthAgo=$(date --date='1 month ago')  # Four weeks back (not a month!)
+OneYearAgo=$(date --date='1 year ago')
+#or
+DATE=$(date --date='5 hours ago')
+
+
+#Few Date format -
+DATE=`date +"%m-%d-%Y-%H-%M"`
+DATE=`date +"%Y-%m-%dT%H"`
