@@ -1,0 +1,17 @@
+#cat unzip.sh 
+
+
+#!/bin/bash
+
+while read line
+do
+gunzip "$line"
+
+#gcloud compute instances list |grep "$line"
+#echo "$line"
+
+done < "$1"
+
+
+#where $1 need to be passed.
+#e.g. sh unzip.sh files.txt
