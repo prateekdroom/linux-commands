@@ -1,0 +1,5 @@
+$ cat mv.sh 
+
+for f in *.export; do 
+    mv -- "$f" "${f%.export}.json"
+done
