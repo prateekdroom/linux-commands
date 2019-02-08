@@ -1,0 +1,10 @@
+# Command to remove last word of any file -
+(format can be anything json or txt)
+
+sed '$ s/.$//' file.json > file.json1
+
+
+# Command to remove first few words of any file -
+( this will remove first 10 letters of the file)
+
+tail -c +10 file.json > file.json1
