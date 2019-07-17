@@ -1,0 +1,1 @@
+gcloud compute disks list | tail -n +2 | awk '{print $1":"$1,$2}' | sed 's/\ /\-date --zone /g'| sed 's/^/gcloud compute disks snapshot /g' | sed 's/\:/\ --snapshot-names /g'
